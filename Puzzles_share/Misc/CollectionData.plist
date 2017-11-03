@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DataSource01</key>
+	<array>
+		<string>01 - Calc Min Circular</string>
+		<string>02 - Find all circulars</string>
+        <string>03 - Find back cards</string>
+        <string>04 - Calc Bar cut count</string>
+        <string>05 - Change money</string>
+        <string>06 - 3x + 1 Problem</string>
+        <string>07 - Find circular dates</string>
+        <string>08 - Calc robot moving</string>
+        <string>09 - Calc Short Paths</string>
+        <string>10 - Find roulette max</string>
+        <string>11 - Devided fibonacci</string>
+        <string>12 - Min numbers of sqrt</string>
+        <string>13 - Verbal arithmetic</string>
+        <string>14 - Country name chains</string>
+        <string>15 - Find same steps(1)</string>
+        <string>15 - Find same steps(2)</string>
+        <string>16 - Find square  area</string>
+        <string>17 - Calc Rowing Patterns</string>
+        <string>18 - Cake cutting(1)</string>
+        <string>18 - Cake cutting(2)</string>
+        <string>19 - Find friend map</string>
+        <string>20 - Calc magic square</string>
+        <string>21 - Find zero position(1)</string>
+        <string>21 - Find zero position(2)</string>
+        <string>22 - Calc pairing patterns</string>
+        <string>23 - Calc blackjack(1)</string>
+        <string>23 - Calc blackjack(2)</string>
+        <string>24 - Calc striking (1)</string>
+        <string>24 - Calc striking (2)</string>
+        <string>24 - Calc striking (3)</string>
+        <string>25 - Calc lacing  (1)</string>
+        <string>25 - Calc lacing  (2)</string>
+	</array>
+    <key>DataSource02</key>
+    <array>
+        <string>26 - Calc Parking routes(1)</string>
+        <string>26 - Calc Parking routes(2)</string>
+        <string>27 - Calc driving routes(1)</string>
+        <string>28 - Calc club max area(1)</string>
+        <string>29 - Calc golden ratio(1)</string>
+        <string>30 - Calc table pligs(1)</string>
+        <string>31 - Calc shortest path(1)</string>
+        <string>31 - Calc shortest path(2)</string>
+        <string>32 - Calc tatami filling (1)</string>
+        <string>32 - Calc tatami filling (2)</string>
+        <string>32 - Calc tatami filling (3)</string>
+        <string>32 - Calc tatami filling (4)</string>
+        <string>33 - Calc uta-carta words (1)</string>
+        <string>33 - Calc uta-carta words (2)</string>
+        <string>34 - Calc chess ranges (1)</string>
+        <string>34 - Calc chess ranges (2)</string>
+        <string>35 - Calc meeting patterns (1)</string>
+        <string>35 - Calc meeting patterns (2)</string>
+        <string>35 - Calc meeting patterns (3)</string>
+        <string>35 - Calc meeting patterns (4)</string>
+        <string>36 - Find circular 7 or 0 (1)</string>
+        <string>36 - Find circular 7 or 0 (2)</string>
+        <string>37 - Find dice patterns (1)</string>
+        <string>37 - Find dice patterns (2)</string>
+        <string>37 - Find dice patterns (3)</string>
+        <string>37 - Find dice patterns (4)</string>
+        <string>37 - Find dice patterns (5)</string>
+        <string>37 - Find dice patterns (6)</string>
+        <string>38 - Number Changer  (1)</string>
+        <string>38 - Number Changer  (2)</string>
+        <string>38 - Number Changer  (3)</string>
+        <string>38 - Number Changer  (4)</string>
+    </array>
+</dict>
+</plist>
