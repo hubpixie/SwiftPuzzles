@@ -95,7 +95,7 @@ extension ViewController2: UICollectionViewDataSource {
         button.addTarget(self, action: #selector(self.tapCellButtonAction(sender:)), for: .touchUpInside)
         return cell
     }
-    func tapCellButtonAction(sender: UIButton) {
+    @objc func tapCellButtonAction(sender: UIButton) {
         guard let indexPath = self.oCollectionView.indexPath(for: sender.superview?.superview as! UICollectionViewCell) else {return}
         
         UIView.animate(withDuration: 0

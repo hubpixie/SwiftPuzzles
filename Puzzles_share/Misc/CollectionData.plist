@@ -14,7 +14,8 @@
         <string>08 - Calc robot moving</string>
         <string>09 - Calc Short Paths</string>
         <string>10 - Find roulette max</string>
-        <string>11 - Devided fibonacci</string>
+        <string>11 - Devided fibonacci(1)</string>
+        <string>11 - Devided fibonacci(2)</string>
         <string>12 - Min numbers of sqrt</string>
         <string>13 - Verbal arithmetic</string>
         <string>14 - Country name chains</string>
@@ -30,7 +31,6 @@
         <string>21 - Find zero position(2)</string>
         <string>22 - Calc pairing patterns</string>
         <string>23 - Calc blackjack(1)</string>
-        <string>23 - Calc blackjack(2)</string>
         <string>24 - Calc striking (1)</string>
         <string>24 - Calc striking (2)</string>
         <string>24 - Calc striking (3)</string>

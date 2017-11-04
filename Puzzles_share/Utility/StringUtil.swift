@@ -20,12 +20,12 @@ class StringUtil {
             var offset: Int = 0
             for em in results {
                 eIndex = text.index(sIndex, offsetBy: em.range.location - offset)
-                retValues.append(text.substring(with: sIndex..<eIndex))
+                retValues.append(String(text[sIndex..<eIndex]))
                 sIndex = text.index(eIndex, offsetBy: em.range.length)
                 offset = em.range.location + em.range.length
             }
             eIndex = text.index(sIndex, offsetBy: text.count - offset)
-            retValues.append(text.substring(with: sIndex..<eIndex))
+            retValues.append(String(text[sIndex..<eIndex]))
             return retValues
             
         } catch let error {

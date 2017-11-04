@@ -225,7 +225,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7D1B50621FA58436009EC191 /* Build configuration list for PBXProject "SwiftPuzzles" */;
+			buildConfigurationList = 7D1B50621FA58436009EC191 /* Build configuration list for PBXProject "SwiftPuzzles_ios" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -424,7 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hubpixie.SwiftPuzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Puzzles_share/Misc/SwiftPuzzles-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -439,7 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hubpixie.SwiftPuzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Puzzles_share/Misc/SwiftPuzzles-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -447,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D1B50621FA58436009EC191 /* Build configuration list for PBXProject "SwiftPuzzles" */ = {
+		7D1B50621FA58436009EC191 /* Build configuration list for PBXProject "SwiftPuzzles_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D1B50771FA58436009EC191 /* Debug */,

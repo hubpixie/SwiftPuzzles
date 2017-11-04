@@ -323,6 +323,7 @@ class SPuzzles {
     }
     
     /*
+     * Q09-1
      * Calculate short path routes between two groups
      *
      * Parameter - groupA: group A
@@ -360,6 +361,7 @@ class SPuzzles {
     }
     
     /*
+     * Q10-1
      * Find how many kinds while  the sum of euro roulette is smaller than american's
      *
      * Parameter - non
@@ -405,6 +407,7 @@ class SPuzzles {
     }
     
     /*
+     * Q11-1
      * Find a fibo number that is done by dividing the sums of every bits
      *
      * Parameter - limitCount: set the limit of finding
@@ -427,7 +430,7 @@ class SPuzzles {
             if c % sum == 0 {
                 cnt += 1
                 retNumbers.append(c)
-                print("N=\(cnt), Fib = \(c)")
+                //print("N=\(cnt), Fib = \(c)")
             }
             a = b; b = c
         }
@@ -435,12 +438,13 @@ class SPuzzles {
     }
     
     /*
+     * Q11-0
      * Find a fibo number that is done by dividing the sums of every bits
      *
      * Parameter - limitCount: set the limit of finding
      * Returns   - found fibo numbers
      */
-    func findFibonacciDevidedNumbers2(limitCount: Int) -> [NSDecimalNumber] {
+    func findFibonacciDevidedNumbers00(limitCount: Int) -> [NSDecimalNumber] {
         var retNumbers: [NSDecimalNumber] = []
         var a: NSDecimalNumber = NSDecimalNumber(string: "1")
         var b: NSDecimalNumber = NSDecimalNumber(string: "1")
@@ -467,6 +471,38 @@ class SPuzzles {
     }
     
     /*
+     * Q11-2
+     * Find a fibo number that is done by dividing the sums of every bits
+     *
+     * Parameter - limitCount: set the limit of finding
+     * Returns   - found fibo numbers
+     */
+    func findFibonacciDevidedNumbers2(limitCount: Int) -> [BigInt] {
+        var retNumbers: [BigInt] = []
+        var a: BigInt = BigInt("1")
+        var b: BigInt = BigInt("1")
+        var c: BigInt = BigInt("0")
+        var cnt: Int = 0
+        
+        while cnt < limitCount {
+            c = a + b
+            var sum: Int = 0
+            let str: String = "\(c)"
+            for e in str {
+                sum += Int(String(e))!
+            }
+            if c % sum == 0 {
+                cnt += 1
+                retNumbers.append(c)
+                print("N=\(cnt), Fib = \(c)")
+            }
+            a = b; b = c
+        }
+        return retNumbers
+    }
+
+    /*
+     * Q12-1
      * Find min numbers from sqrt of number values
      *
      * Parameter - none
@@ -484,7 +520,7 @@ class SPuzzles {
         while true {
             str1 = String(format: "%10.10f", sqrt(Double(idx)))
             let sIdx = str1.index(str1.startIndex, offsetBy: 11)
-            str1 = str1.substring(to: sIdx)
+            str1 = String(str1[..<sIdx])
             str2 = str1.replacingOccurrences(of: ".", with: "")
             arr = Array(Set(Array(str2)))
             if arr.count == 10 {
@@ -510,6 +546,7 @@ class SPuzzles {
     }
     
     /*
+     * Q13-1
      * Find cryptarithmetic formula
      *
      * Parameter - formula
@@ -586,7 +623,7 @@ class SPuzzles {
                 }
                 usedNames = "\(usedNames),\(cname)"
                 if usedNames.first == "," {
-                    usedNames = usedNames.substring(from: usedNames.index(after: usedNames.startIndex))
+                    usedNames = String(usedNames[usedNames.index(after: usedNames.startIndex)..<usedNames.endIndex])
                 }
                 countryStack.push((poppedSts.0 + 1, usedNames))
             }
@@ -938,7 +975,7 @@ class SPuzzles {
             for i in 0..<itemChars1.count {
                 item += "\(Int(String(itemChars1[i]))! ^ Int(String(itemChars2[i]))!)"
             }
-            zeroCnt += item.filter({$0 == "0"}).count
+            zeroCnt += (item.filter{$0 == "0"} as [Character]).count
             print("item[\(row + 1)] = \(item)")
             
             row += 1
@@ -1804,7 +1841,10 @@ class SPuzzles {
             
             var l = 0, r = 0
             for k in 0..<2 {
-                if(x + D[k][0] < h && y + D[k][1] < v && tatami[x+D[k][0]][y+D[k][1]] == chr0) {
+                let x1 = x+D[k][0]; let y1 = y+D[k][1]
+                if (x + D[k][0] < h)
+                    && (y + D[k][1] < v)
+                    && (tatami[x1][y1] == chr0) {
                     tatami[x][y] = UnicodeScalar(D[k][2])!
                     tatami[x+D[k][0]][y+D[k][1]] = tatami[x][y]
                     
@@ -1865,7 +1905,7 @@ class SPuzzles {
                 cnt += len - 1
             } else {
                 arr.uniqStringArray(keyRangeStart: 0, keyRangeEnd: len).forEach { str in
-                    cnt += calc_words_1(arr.filter{$0.hasPrefix(str.substring(with: str.range(location: 0, length: len)))}, len + 1)
+                    cnt += calc_words_1(arr.filter{$0.hasPrefix(String(str[str.range(location: 0, length: len)]))}, len + 1)
                 }
             }
             return cnt
@@ -2408,7 +2448,7 @@ class SPuzzles {
         // calculate patterns when switch two numbers
         let num_switch =  {(num1: Int, num2: Int) -> Int in
             if num1 < 0 || num1 > 9 || num2 < 0 || num2 > 9 {return 0}
-            let sum: Int = String(bits[num1] ^ bits[num2], radix: 2).filter({$0 == "1"}).count
+            let sum: Int = (String(bits[num1] ^ bits[num2], radix: 2).filter({$0 == "1"}) as [Character]).count
             return sum
         }
         
@@ -2451,7 +2491,7 @@ class SPuzzles {
         var num_arr: [[Int]] = Array(repeating: Array(repeating: 0, count: 10), count: 10)
         for i in 0..<10 {
             for j in 0..<10 {
-                num_arr[i][j] = String(bits[i] ^ bits[j], radix: 2).filter({$0 == "1"}).count
+                num_arr[i][j] = (String(bits[i] ^ bits[j], radix: 2).filter{$0 == "1"} as [Character]).count
             }
         }
 

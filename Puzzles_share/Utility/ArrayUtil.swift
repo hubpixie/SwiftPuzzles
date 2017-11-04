@@ -19,7 +19,7 @@ extension Array {
         
         for item in self  {
             if let str: String = item as? String {
-                let key: String = str.substring(with: str.range(location: keyRangeStart, length: keyRangeEnd))
+                let key: String = String(str[str.range(location: keyRangeStart, length: keyRangeEnd)])
                 if !distincts.contains(key) {
                     distincts.append(key)
                     retArr.append(str)

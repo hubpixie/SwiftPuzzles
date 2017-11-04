@@ -38,40 +38,39 @@ class ButtonActions {
         case 9:
             self.tapQ10Action()
         case 10:
-            self.tapQ11Action()
+            self.tapQ11x1Action()
         case 11:
-            self.tapQ12Action()
+            self.tapQ11x2Action()
         case 12:
-            self.tapQ13Action()
+            self.tapQ12Action()
         case 13:
-            self.tapQ14Action()
+            self.tapQ13Action()
         case 14:
-            self.tapQ15x1Action()
+            self.tapQ14Action()
         case 15:
-            self.tapQ15x2Action()
+            self.tapQ15x1Action()
         case 16:
-            self.tapQ16Action()
+            self.tapQ15x2Action()
         case 17:
-            self.tapQ17Action()
+            self.tapQ16Action()
         case 18:
-            self.tapQ18x1Action()
+            self.tapQ17Action()
         case 19:
-            self.tapQ18x2Action()
+            self.tapQ18x1Action()
         case 20:
-            self.tapQ19Action()
+            self.tapQ18x2Action()
         case 21:
-            self.tapQ20Action()
+            self.tapQ19Action()
         case 22:
-            self.tapQ21x1Action()
+            self.tapQ20Action()
         case 23:
-            self.tapQ21x2Action()
+            self.tapQ21x1Action()
         case 24:
-            self.tapQ22Action()
+            self.tapQ21x2Action()
         case 25:
-            self.tapQ23x1Action()
+            self.tapQ22Action()
         case 26:
-            //self.tapQ23x2Action()
-            break
+            self.tapQ23x1Action()
         case 27:
             self.tapQ24x1Action()
         case 28:
@@ -273,11 +272,25 @@ class ButtonActions {
         print("time elapsed:\(DateUtil().elapsedTimeString(startTime: timeA, endTime: Date()))")
     }
     
-    func tapQ11Action() {
+    func tapQ11x1Action() {
+        //NSDecimal
         print("Q11: findFibonacciDevidedNumbers(limitCount: 10) ->")
         let timeA = Date()
         let ret = SPuzzles.sharedInstance.findFibonacciDevidedNumbers(limitCount: 10)
-        print("findFibonacciDevidedNumbers2=\(ret)")
+        for (idx, v)  in ret.enumerated() {
+            print("findFibonacciDevidedNumbers:[\(idx)] = \(v)")
+        }
+        print("time elapsed:\(DateUtil().elapsedTimeString(startTime: timeA, endTime: Date()))")
+    }
+    
+    func tapQ11x2Action() {
+        //BigInt
+        print("Q11: findFibonacciDevidedNumbers2(limitCount: 50) ->")
+        let timeA = Date()
+        let ret = SPuzzles.sharedInstance.findFibonacciDevidedNumbers2(limitCount: 50)
+        for (idx, v)  in ret.enumerated() {
+            print("findFibonacciDevidedNumbers2:[\(idx)] = \(v)")
+        }
         print("time elapsed:\(DateUtil().elapsedTimeString(startTime: timeA, endTime: Date()))")
     }
     

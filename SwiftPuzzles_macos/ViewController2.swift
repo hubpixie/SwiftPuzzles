@@ -33,7 +33,7 @@ class ViewController2: NSViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.oCollectionView.register(NSNib(nibNamed: "PuzzleActionCellX", bundle: nil), forItemWithIdentifier: "PuzzleActionCellX")
+        self.oCollectionView.register(NSNib(nibNamed: NSNib.Name(rawValue: "PuzzleActionCellX"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "PuzzleActionCellX"))
         self.oCollectionView.dataSource = self
         self.oCollectionView.delegate = self
     }
@@ -64,7 +64,7 @@ extension ViewController2: NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
         // 4
-        let item = collectionView.makeItem(withIdentifier: "PuzzleActionCellX", for: indexPath)
+        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "PuzzleActionCellX"), for: indexPath)
         
         guard let collectionViewItem = item as? PuzzleActionCellX else {return item}
         
@@ -82,7 +82,7 @@ extension ViewController2: NSCollectionViewDataSource {
         let indexPath: NSIndexPath = NSIndexPath(forItem: sender.tag, inSection: 0)
         NSAnimationContext.runAnimationGroup({_ in
             //Indicate the duration of the animation
-            NSAnimationContext.current().duration = 3.0
+            NSAnimationContext.current.duration = 3.0
             //What is being animated? In this example I’m making a view transparent
             self.oCollectionView.animator().alphaValue = 0.5
             self.oCollectionView.disableSubViews(target: nil)
